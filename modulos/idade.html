@@ -58,13 +58,13 @@
        	var ano = d.getFullYear();
         var idade = (ano-x);
         var texto = a();
-
+				var idade2 = (idade - 1);
 				switch(texto){
 					case "Sim":
 						mostra("Você tem " + idade + " anos de idade" + "<br> Parabéns atrasado");
 						break;
 					case "Não":
-						mostra("Você tem " + idade + " anos de idade" + "<br> Parabéns adiantado");
+						mostra("Você tem " + idade2 + " anos de idade" + "<br> Parabéns adiantado");
 						break;
 					default:
 						mostra("responda a pergunta");
