@@ -1,0 +1,15 @@
+*{
+  color: red;
+  background-color:black ;
+  margin: 0px;
+}
+#l1{
+  font-size: larger;
+}
+.b1{
+  margin-bottom: 1%;
+}
+header a{
+  display: block;
+  margin-bottom: 1%;
+}

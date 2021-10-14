@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--css-->
+    <link rel="stylesheet" href="../css/dado.css  ">
+  </head>
+  <body>
+    <header>
+      <h1>Simulador de dados</h1>
+      <a href="../index.html">Home</a>
+      <button onclick="d20()" class="b1">Jogar d20</button>
+      <button onclick="dx()" class="b2">Jogar outros dados</button>
+      <input id="nl" placeholder="Número de lados desejado" >
+    </header>
+    <p id="l1"><br>Resultado
+    <div id="caixa"></div>
+    </p>
+    <script>
+      function d20(){
+        let a = Math.floor(Math.random() * 21);
+        switch(a){
+          case 0:
+            a = "1 <br> Parabéns, você tirou um crítico negativo";
+            break;
+          case 1:
+            a = "1 <br> Parabéns, você tirou um crítico negativo";
+            break;
+          case 20:
+            a = "20 <br> Parabéns, você tirou um crítico positivo";
+          default:
+            a = a;
+            break;
+        }
+        mostra(a);
+      }
+      function dx(){
+        let a = document.getElementById("nl").value;
+        let b = Math.floor(Math.random() * a + 1);
+        if(b == 0 || b == 1){
+          mostra(1 + "<br> Parabéns, você tirou um crítico negativo");
+        }
+        if(b == a){
+          mostra(a + "<br> Parabéns, você tirou um crítico positivo")
+        }
+        if(b != 0 && b != 1 && b != a){
+          mostra(b)
+        }
+      }
+      function mostra(txt){
+        let a = document.getElementById("caixa").innerHTML = txt;
+      }
+    </script>
+  </body>
+</html>
