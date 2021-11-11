@@ -15,7 +15,7 @@
 		<a href="../index.html" id="h">Home</a>
 		<div class="div1"> 
 			<input type="number" id="n1" placeholder="Ano de nascimento" class="input-padrao"/>
-			<button type="submit" onClick="Calc()" class="button-padrao">Calcular</button>
+			<button type="submit" onClick="Calc()"  id="bt1" class="button-padrao">Calcular</button>
 		</div>
 		<div>
 			<label>Já fez aniversário este ano ?</label>
@@ -65,6 +65,42 @@
       // }
 
 
+
+
+      //key listener para coisas em especifico
+			// document.getElementById("n1")
+    	// 	.addEventListener("keyup", function(event) {
+    	// 		event.preventDefault();
+    	// 		if (event.keyCode === 13) {
+     	// 	   document.getElementById("bt1").click();
+    	// 		}
+			// 	});
+			// document.getElementById("cb1")
+    	// 	.addEventListener("keyup", function(event) {
+    	// 		event.preventDefault();
+    	// 		if (event.keyCode === 13) {
+     	// 	   document.getElementById("bt1").click();
+    	// 		}
+			// 	});
+			// document.getElementById("cb2")
+    	// 	.addEventListener("keyup", function(event) {
+    	// 		event.preventDefault();
+    	// 		if (event.keyCode === 13) {
+     	// 	   document.getElementById("bt1").click();
+    	// 		}
+			// 	});
+				//key listener para a página inteira
+				//keyup porque se usar keydown ele aplica várias vezes
+				//function(event) é obrigatório
+    		document.addEventListener("keyup", function(event) {
+    			event.preventDefault();
+    			if (event.keyCode === 13) {
+     		   Calc();
+						console.log("enter")
+    			}
+				});
+
+
 			function Calc(){
       	var x = document.getElementById("n1").value;
        	var d = new Date();
@@ -83,7 +119,6 @@
 						mostra("responda a pergunta");
 						break;}
     	}
-
 
 			function mostra(txt){
 	 			var Exibir = document.getElementById("caixa").innerHTML = txt;

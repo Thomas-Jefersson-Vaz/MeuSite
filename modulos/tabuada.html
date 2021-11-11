@@ -2,7 +2,7 @@
 <html>
   <head>
     <!--css-->
-    <link rel="stylesheet" href="../css/taboada.css">
+    <link rel="stylesheet" href="../css/tabuada.css">
     <title>calculadora de tabuada</title>
   </head>
   <body>
@@ -19,6 +19,13 @@
     <div id="caixa">	  
     </div>
     <script>
+      document.addEventListener("keyup", function(event) {
+    		event.preventDefault();
+    		if (event.keyCode === 13) {
+     		  Calc();
+					console.log("enter")
+    			}
+				});
       function calc(){
         document.getElementById("caixa").innerHTML = ""
         var numero = document.getElementById("b1").value

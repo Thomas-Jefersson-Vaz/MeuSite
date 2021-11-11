@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--css-->
+    <link rel="stylesheet" href="../css/teclado.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="enter">Enter</h1>
+      <div id="container1">
+        <h1 id="w">w</h1>
+        <h1 id="a">a</h1>
+        <h1 id="s">s</h1>
+        <h1 id="d">d</h1>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('keydown', function(event) {
+    	 	event.preventDefault();
+        let enter = document.getElementById('enter');
+    	 	if (event.keyCode === 13) {
+          enter.style.color = 'white'
+          enter.style.border = '1px solid red'
+          console.log('down')
+        }
+        let a = document.getElementById('a');
+    	 	if (event.keyCode === 65) {
+          a.style.color = 'white'
+          a.style.border = '1px solid red'
+          console.log('down')
+        }
+        let w = document.getElementById('w');
+    	 	if (event.keyCode === 87) {
+          w.style.color = 'white'
+          w.style.border = '1px solid red'
+          console.log('down')
+        }
+        let s = document.getElementById('s');
+    	 	if (event.keyCode === 83) {
+          s.style.color = 'white'
+          s.style.border = '1px solid red'
+          console.log('down')
+        }
+        let d = document.getElementById('d');
+    	 	if (event.keyCode === 68) {
+          d.style.color = 'white'
+          d.style.border = '1px solid red'
+          console.log('down')
+        }
+			 	});
+      document.addEventListener('keyup', function(event) {
+        if(event.keyCode === 13) {
+          enter.style.color = 'red'
+          enter.style.border = '1px solid white'
+          console.log('up')
+        }
+        if(event.keyCode === 65) {
+          a.style.color = 'red'
+          a.style.border = '1px solid white'
+          console.log('up')
+        }
+        if(event.keyCode === 87) {
+          w.style.color = 'red'
+          w.style.border = '1px solid white'
+          console.log('up')
+        }
+        if(event.keyCode === 83) {
+          s.style.color = 'red'
+          s.style.border = '1px solid white'
+          console.log('up')
+        }
+        if(event.keyCode === 68) {
+          d.style.color = 'red'
+          d.style.border = '1px solid white'
+          console.log('up')
+        }
+        });
+    </script>
+  </body>
+</html>

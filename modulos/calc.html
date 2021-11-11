@@ -2,19 +2,29 @@
 <html lang="pt-br">
   <head>
     <!--meta-->
-    <meta charset="utf-8">
+      <meta charset="utf-8">
+    <!--Links externos-->
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <!--css-->
-    <link rel="stylesheet" href="../css/calc.css">
+     <link rel="stylesheet" href="../css/calc.css">
     <title>Calculadora Simples</title>
   </head>
   <body>
-    <h>Calculadora Simples</h>
-    <a href="../index.html">Home</a>
+    <div id="title">
+      <h>Calculadora Simples</h>
+      <a href="../index.html">Home</a>
+    </div>
     <div id="inputs">
       <input type="number" id="i1" placeholder="número">
       <input type="number" id="i2" placeholder="número">
-      <input type="text" id="i3" placeholder="Sinal:add sub mul div">
     </div>
+    <div id="sinais">
+      <label for="s1" ><input type="radio" name="sinal" id="s1">+</label>
+      <label for="s2" ><input type="radio" name="sinal" id="s2">–</label>
+      <label for="s3" ><input type="radio" name="sinal" id="s3">×</label>
+      <label for="s4" ><input type="radio" name="sinal" id="s4">÷</label>
+    </div>
+  
   	<div id=" tentativa">
       <button onclick="Calc()">Calcular</button>
       <button onclick="limpar()" class="b2">Limpar Tudo</button>
@@ -23,23 +33,50 @@
     <div id="caixa">
   	</div>
     <script>
+      document.addEventListener("keyup", function(event) {
+    		event.preventDefault();
+    		if (event.keyCode === 13) {
+     		  Calc();
+					console.log("enter")
+    			}
+				});
+
+      function a(){
+        if($('#s1').is(":checked")){
+					var b = "+";
+					return (b);
+				}
+        if($('#s2').is(":checked")){
+					var b = "-";
+					return (b);
+				}
+        if($('#s3').is(":checked")){
+					var b = "*";
+					return (b);
+				}
+        if($('#s4').is(":checked")){
+					var b = "/";
+					return (b);
+				}
+      }  
+
       function Calc(){
         let pn = document.getElementById("i1").value;
         let sn = document.getElementById("i2").value;
-        let s = document.getElementById("i3").value;
+        let s = a();
         let pni = parseInt(pn);
         let sni = parseInt(sn);
         switch(s){
-          case "add":
+          case "+":
             mostra(`${pni} + ${sni} = ${pni+sni}`);
             break;
-          case "sub":
+          case "-":
             mostra(`${pni} - ${sni} = ${pni-sni}`);
             break;
-          case "mul":
+          case "*":
             mostra(`${pni} × ${sni} = ${pni*sni}`);
             break;
-          case "div":
+          case "/":
             mostra(`${pni} ÷ ${sni} = ${pni/sni}`);
             break;
           default:
@@ -53,8 +90,14 @@
       function limpar(){
         var l1 = document.getElementById("i1");
         var l2 = document.getElementById("i2");
-        var l = document.getElementById("i3");
-        l.value = "";
+        var l3 = document.getElementById("s1");
+        var l4 = document.getElementById("s2");
+        var l5 = document.getElementById("s3");
+        var l6 = document.getElementById("s4");
+        $( s1 ).prop({checked: false});
+        $( s2 ).prop({checked: false});
+        $( s3 ).prop({checked: false});
+        $( s4 ).prop({checked: false});
         l1.value = "";
         l2.value = "";
       }

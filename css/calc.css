@@ -7,11 +7,15 @@ body{
 }
 #inputs{
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column;
 }
 #i1, #i2, #i3{
   margin-right: 82%;
 }
 h{
   font-size: larger;
+}
+#title{
+  display: flex;
+  flex-flow: column;
 }

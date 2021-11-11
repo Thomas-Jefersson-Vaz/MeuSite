@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <p>No passado, era preciso instalar os mais diversos programas, muitos deles pagos, para que fosse possível dar os primeiros passos no mundo da programação. Isso acabava espantando os candidatos à programação. A boa notícia é que as coisas mudaram!</p>
+      <p><br>Temos as seguintes afirmações sobre o parágrafo anterior:</p>
+      <p><br>Qual das opções abaixo é verdadeira a respeito das afirmativas anteriores?</p> 
+    <p>A) Os sistemas operacionais mais populares do mercado (Windows, Linux, Mac) já vêm com um navegador web padrão e todo navegador é capaz de interpretar um código escrito por nós.    </p>
+    <p>B) Uma das linguagens que o navegador compreende é a HTML.</p>
+    <p>C) Um navegador é um poliglota.</p>
+    <div>
+      <label for="q11"><input type="radio" name="q1" id="q11">Todas são verdadeiras</label><br>
+      <label for="q12"><input type="radio" name="q1" id="q12">Apenas a C é falsa</label><br>
+      <label for="q13"><input type="radio" name="q1" id="q13">Apenas a B é falsa</label><br>
+    </div>    <div id="caixa"></div>
+    <script>
+       q11.addEventListener("click", function(event) {
+        mostra('Parabéns, você acertou a primeira questão.')});
+       q12.addEventListener("click", function(event) {
+        mostra('Você errou, tente outra vez.')});
+       q13.addEventListener("click", function(event) {
+        mostra('Você errou, tente outra vez.')});
+      function mostra(txt){
+	 			var Exibir = document.getElementById("caixa").innerHTML = txt;}
+    </script>
+  </body>
+</html>

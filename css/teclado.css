@@ -1,0 +1,49 @@
+*{
+  color: red;
+  margin: 0px;
+}
+body,html{
+  height: 100%;
+}
+body{
+  background-color: black;
+}
+#container{
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  width: 8%;
+  height: 45%;
+}
+#container1{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#w{
+  display: inline;
+  border: 1px solid white;
+  width: 100%;
+}
+
+
+
+
+#enter{
+  display: inline;
+  border: 1px solid white;
+}
+#a{
+  display: inline;
+  border: 1px solid white;
+}
+#s{
+  display: inline;
+  border: 1px solid white;
+}
+#d{
+  display: inline;
+  border: 1px solid white;
+}

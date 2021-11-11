@@ -1,0 +1,19 @@
+*{
+  color: red;
+}
+body{
+  background-color: black;
+}
+#b2{
+  margin-right: 75%;
+}
+#h2{
+  font-size: larger;
+  margin-right: 10%;
+}
+#l1{
+  font-size: larger;
+}
+body h{
+  font-size: larger;
+}
