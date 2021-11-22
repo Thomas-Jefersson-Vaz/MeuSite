@@ -1,0 +1,63 @@
+*{
+  color: red;
+  margin: 0%;
+  padding: 0%;
+  border: none;
+}
+body{
+  background-color: black;
+}
+h{
+  font-size: larger;
+}
+.cr2{
+  display: inline-flex;
+  
+}
+a{
+  text-decoration: none;
+}
+p{
+  font-size: larger;
+}
+.svg{
+  height: 7%;
+  width: 7%;
+}
+.jpg{
+  width: 100%;
+  
+}
+button{
+  background-color: black;
+  font-size: larger;
+  display: block;
+  margin-bottom: 5%;
+}
+#ft-perfil{
+  width: 15%;
+  border-radius: 50%;
+}
+#pf{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8%;
+}
+#pf p{
+  font-size: 1.5em;
+}
+#pf h1{
+  font-size: 2.5em;
+}
+body bottom{
+  margin-bottom: 2%;
+}
+#pf a{
+  width: 100%;
+  border-radius: 100%;
+}
+#pf:hover #ft-perfil{
+  transform: scale(1.1);
+  transition: 0.2s;
+  cursor: pointer;
+}
